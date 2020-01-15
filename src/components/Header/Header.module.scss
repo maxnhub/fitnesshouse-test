@@ -1,0 +1,43 @@
+.Header {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background: #2d5580;
+    &__container {
+        width: 100%;
+        max-width: 1250px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        font-size: 22px;
+    }
+    &__button {
+        width: 160px;
+        font-size: 14px;
+        color: #a0afbf;
+        background: transparent;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 1px solid #a0afbf;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__counter {
+        color: #2b92cd;
+        padding: 5px 10px;
+        background: #fff;
+        border-radius: 10px;
+    }
+    &__cart {
+        width: 16px;
+        height: 16px;
+    }
+
+}

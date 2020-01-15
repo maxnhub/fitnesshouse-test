@@ -1,0 +1,38 @@
+.Main {
+    &__filters {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 40px;
+        &_block {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 40%;
+                right: 12px;
+                width: 5px;
+                height: 5px;
+                border-left: 2px solid #697382;
+                border-bottom: 2px solid #697382;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-transform-origin: 0 100%;
+                transform-origin: 0 100%;
+                margin-bottom: .5rem;
+            }
+        }
+        &_select {
+            background: #edf2f7;
+            border-radius: 5px;
+            padding: 18px 60px 18px 18px;
+            border: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            color: #697382;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}

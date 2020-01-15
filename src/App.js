@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react'
+import classes from './App.module.scss'
+import Header from './components/Header/Header'
+import Main from './containers/Main/Main'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component {
+
+  state = {
+    counter: 0
+  }
+
+  addCounter = () => {
+    this.setState((prevState) => {
+        return {
+            counter: prevState.counter + 1
+        }
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <Header counter={this.state.counter}/>
+        <main>
+          <section className={classes.Main}>
+          <button onClick={this.addCounter} className="counter__button">+</button>
+            <div className={classes.container}>
+              <Main />
+            </div>
+          </section>
+  
+        </main>
+      </div>
+    )
+  }
 }
 
 export default App;
