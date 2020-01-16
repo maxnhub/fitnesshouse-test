@@ -5,13 +5,12 @@ import Filters from '../../components/Navigation/Filters/Filters'
 import Services from '../../components/Services/Services'
 
 
-
 const Main = () => {
 
     return(
       <React.Fragment>
-        <Filters />
-        <Services />
+          <Filters />
+          <Services />
       </React.Fragment>
     )
 }

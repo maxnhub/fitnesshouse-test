@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import classes from './App.module.scss'
 import Header from './components/Header/Header'
 import Main from './containers/Main/Main'
+import {Route, Switch, Redirect, withRouter} from 'react-router-dom'
+import ServicePage from './components/ServicePage/ServicePage'
 
 
 
@@ -20,6 +22,15 @@ class App extends Component {
   }
 
   render() {
+    let routes = (
+      <Switch>
+        <Route path="/main" component={Main}/>
+        <Route path="/main/:id" component={ServicePage}/>
+        <Route path="/" exact component={Main}/>
+        <Redirect to="/" />
+      </Switch>
+    )
+
     return (
       <div>
         <Header counter={this.state.counter}/>
@@ -27,7 +38,7 @@ class App extends Component {
           <section className={classes.Main}>
           <button onClick={this.addCounter} className="counter__button">+</button>
             <div className={classes.container}>
-              <Main />
+              { routes }
             </div>
           </section>
   
@@ -37,4 +48,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);

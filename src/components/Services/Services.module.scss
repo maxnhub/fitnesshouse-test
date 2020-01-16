@@ -5,6 +5,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 50px;
+        margin-bottom: 50px;
     &__item {
         display: flex;
         flex-direction: column;

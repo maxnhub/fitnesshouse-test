@@ -12,19 +12,10 @@ class Services extends Component {
     }
 
     componentWillMount() {
-
-        
-
-
-          
+               
     }
 
     componentDidMount() {
-        
-    }
-
-    render() {
-        
         const services = this.state.services
 
         axios.get('https://fitnesshouse-test.firebaseio.com/services.json').then(response => {
@@ -35,10 +26,14 @@ class Services extends Component {
 
             // services.push(service)
 
-            return arr
+            this.setState({
+                services: arr
+            })
 
         })
+    }
 
+    render() {
         
         
         return(
@@ -110,6 +105,7 @@ class Services extends Component {
                     </div>
                 </li>
             </ul>
+            
         )
     }
 
