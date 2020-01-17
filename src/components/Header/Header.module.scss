@@ -5,6 +5,11 @@
     align-items: center;
     color: #fff;
     background: #2d5580;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
     &__container {
         width: 100%;
         max-width: 1250px;
@@ -12,9 +17,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: 1024px) {
+            max-width: 924px;
+            width: 95%;
+        }
+        @media screen and (max-width: 924px) {
+            width: 90%;
+        }
     }
     &__title {
         font-size: 22px;
+        cursor: pointer;
     }
     &__button {
         width: 160px;
