@@ -17,10 +17,7 @@
 1. git clone git@github.com:maxnhub/fitnesshouse-test.git
 2. cd fitnesshouse-test
 3. npm i
-4. npm i node-sass
-5. npm i react-dom
-6. npm i react-svg
-7. npm run build
+4. npm run build
 ```
 
 <!-- ### You can see how it works here:
